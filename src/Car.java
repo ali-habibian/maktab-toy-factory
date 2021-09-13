@@ -21,11 +21,11 @@ public class Car extends Toy {
     public double getPrice(double discount) {
         double a = discount / 100;
         if (this.getSize().equals(ToySize.SMALL)) {
-            return this.getBasePrice() * 2 * a;
+            return (this.getBasePrice() - this.getBasePrice() * a) * 2;
         } else if (this.getSize().equals(ToySize.MEDIUM)) {
-            return this.getBasePrice() * 2.5 * a;
+            return (this.getBasePrice() - this.getBasePrice() * a) * 2.5;
         } else if (this.getSize().equals(ToySize.LARGE)) {
-            return this.getBasePrice() * 3 * a;
+            return (this.getBasePrice() - this.getBasePrice() * a) * 3;
         }
         return 0;
     }

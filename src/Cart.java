@@ -1,15 +1,19 @@
 public class Cart {
-    private Store store = new Store();
-    private ToyArray toys = new ToyArray();
+    private final ToyArray toysInCart = new ToyArray();
 
-    public void addToyToCart(Toy toy) {
-        toys.addToy(toy);
-
-        // TODO
-        store.removeToyFromStore(toy);
+    public void addToyToCart(Store store, Toy toy) {
+        toysInCart.addToy(toy);
+//        store.removeToyFromStore(toy);
     }
 
     public Toy[] getBuyedToys() {
-        return toys.getToys();
+        return toysInCart.getToys();
+    }
+
+    public void printBuyedToys(){
+        Toy[] tempToys = getBuyedToys();
+        for (Toy toy : tempToys) {
+            System.out.println(toy);
+        }
     }
 }

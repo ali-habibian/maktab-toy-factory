@@ -58,11 +58,11 @@ public class Toy {
     public double getPrice(double discount) {
         double a = discount / 100;
         if (size.equals(ToySize.SMALL)) {
-            return basePrice * a;
+            return (basePrice - basePrice * a);
         } else if (size.equals(ToySize.MEDIUM)) {
-            return 1.5 * basePrice * a;
+            return 1.5 * (basePrice - basePrice * a);
         } else if (size.equals(ToySize.LARGE)) {
-            return 2 * basePrice * a;
+            return 2 * (basePrice - basePrice * a);
         }
         return 0;
     }
@@ -82,5 +82,14 @@ public class Toy {
         return 0;
     }
 
-
+    @Override
+    public String toString() {
+        return "Toy{" +
+                "id=" + id +
+                ", size=" + size +
+                ", name='" + name + '\'' +
+                ", basePrice=" + basePrice +
+                ", discount=" + discount +
+                '}';
+    }
 }

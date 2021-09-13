@@ -1,20 +1,38 @@
 
 public class Store {
-    private ToyArray toys = new ToyArray();
+    private ToyArray toysInStore = new ToyArray();
+
+    private CustomerArray customers = new CustomerArray();
 
     public void addToyToStore(Toy toy) {
-        toys.addToy(toy);
+        toysInStore.addToy(toy);
     }
 
     public void removeToyFromStore(Toy toy) {
-        toys.removeToy(toy);
+        toysInStore.removeToy(toy);
     }
 
     public void addDiscount(double discount, int id) {
-        Toy toy = toys.search(id);
+        Toy toy = toysInStore.search(id);
 
-        toy.setDiscount(discount);
+        if (toy != null){
+            toy.setDiscount(discount);
+        }
     }
 
+    public void listToys (){
+        toysInStore.print();
+    }
 
+    public void registerCustomer(Customer customer){
+        customers.addCustomer(customer);
+    }
+
+    public ToyArray getToysInStore() {
+        return toysInStore;
+    }
+
+    public CustomerArray getCustomers() {
+        return customers;
+    }
 }

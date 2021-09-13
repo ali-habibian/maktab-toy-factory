@@ -7,15 +7,12 @@ public class Menu {
         System.out.println("             ---------------------Menu----------------------");
         System.out.println("             Add Toy                               : 1      |");
         System.out.println("             Add Discount for Toy[id]              : 2      |");
-        System.out.println("             Buy Toy                               : 3      |");
-        System.out.println("             List Toys                             : 4      |");
-        System.out.println("             customer[id] which one of toy buying  : 5      |");
-        System.out.println("             customer[id] buget                    : 6      |");
-        System.out.println("             Exit                                  : 7      |");
-        System.out.print("             Which option do you choose? :                 ");
-
-
+        System.out.println("             Register Customer                     : 3      |");
+        System.out.println("             Buy Toy                               : 4      |");
+        System.out.println("             List Toys In Store                    : 5      |");
+        System.out.println("             Which toys did the customer[id] buy?  : 6      |");
+        System.out.println("             customer[id] budget                   : 7      |");
+        System.out.println("             Exit                                  : 8      |");
+        System.out.println("             Which option do you choose? :                   ");
     }
-
-
 }

@@ -17,6 +17,10 @@ public class Customer {
         this.cart = cart;
     }
 
+    public Customer() {
+
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -73,9 +77,9 @@ public class Customer {
         this.cart = cart;
     }
 
-    public void buyToy(Toy toy) {
+    public void buyToy(Store store, Toy toy) {
         if (budget >= toy.getPrice()) {
-            cart.addToyToCart(toy);
+            cart.addToyToCart(store, toy);
             budget -= toy.getPrice();
         } else {
             System.out.println("Your budget is not enough");
